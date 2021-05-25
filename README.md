@@ -47,3 +47,5 @@ rostopic pub /navigate_robot/cancel actionlib_msgs/GoalID "stamp:
   nsecs: 0
 id: ''"
 ```
+### Move base params
+Here only yaw goal param is implemented and we can add all params if we want.
