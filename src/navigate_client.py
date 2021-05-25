@@ -26,4 +26,5 @@ class NavigateRobotClient:
 
 if __name__ == '__main__':
     client = NavigateRobotClient()
+    rospy.sleep(2)
     client.send_goals()

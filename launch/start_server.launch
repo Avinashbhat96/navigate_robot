@@ -4,5 +4,11 @@
     <node pkg="navigate_robot" type="navigate_server.py" name="nav_robot" output="screen" clear_params="true">
         <param name="map_name" value="$(arg map)" />
     </node>
+    <!-- Assigning parameter values to the move_base/DWAPlannerROS -->
+  <node
+  name="dynamic_reconfigure_local_costmap"
+  pkg="dynamic_reconfigure"
+  type="dynparam"
+  args="load /move_base/DWAPlannerROS $(find navigate_robot)/param/yaw_goal_param.yaml" />
 
 </launch>
