@@ -1,9 +1,13 @@
 <launch>
 
+    <arg name="goals" default="6" />
+
     <!-- Including the server launch file-->
     <include file="$(find navigate_robot)/launch/start_server.launch" />
 
     <!-- This is a client for the created action-->
-    <node pkg="navigate_robot" name="navigate_robot_client" type="navigate_client.py" output="screen" />
+    <node pkg="navigate_robot" name="navigate_robot_client" type="navigate_client.py" output="screen" >
+        <param name="goals_count" value="$(arg goals)" />
+    </node>
 
 </launch>

@@ -14,7 +14,7 @@ class NavigateRobotClient:
         self._goal = NavigateRobotGoal()
     
     def send_goals(self):
-        self._goal.num_goals = 6
+        self._goal.num_goals = int(rospy.get_param("/navigate_robot_client/goals_count"))
         self._client.send_goal(self._goal)
         rospy.sleep(2)
         self._client.wait_for_result()
