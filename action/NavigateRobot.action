@@ -1,0 +1,8 @@
+#goal
+int8 num_goals
+---
+#result
+int8 state
+---
+#feedback
+string current_state

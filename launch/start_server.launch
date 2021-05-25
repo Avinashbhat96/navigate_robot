@@ -1,0 +1,8 @@
+<launch>
+    <arg name="map" default="map"/>
+    <!-- launches navigation server -->
+    <node pkg="navigate_robot" type="navigate_server.py" name="nav_robot" output="screen" clear_params="true">
+        <param name="map_name" value="$(arg map)" />
+    </node>
+
+</launch>
